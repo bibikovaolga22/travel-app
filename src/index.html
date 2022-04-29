@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Travel App</title>
+</head>
+
+<body onload="Client.renderCurrentWeather(event)">
+    <header>
+        <h1>Explore your next destination</h1>
+    </header>
+    <section class="destination_search">
+        <form action="" class="destination_form" onsubmit=" Client.handleSubmit(event)">
+            <div class="trip_destination">
+                <label for="trip_destination">Trip Destination</label><br>
+                <input type="text" id="trip_destination" name="trip_destination" placeholder="e.g. London, UK"
+                    autocomplete="off"><br>
+            </div>
+            <div class="departure_date">
+                <label for="departure_date">Departure Date</label><br>
+                <input type="date" id="departure_date" name="departure_date">
+            </div>
+
+
+            <button id='generate' type="submit" onclick=" Client.handleSubmit(event)" 
+            onmouseover= ' Client.buttonMouseOver()' onmouseout=" Client.buttonMouseOut()">Search</button>
+
+        </form>
+    </section>
+    <section class="search_results">
+        <div class="card">
+            <figure>
+                <img id='city-image' src="https://cdn.pixabay.com/photo/2020/03/18/21/47/ireland-4945565_960_720.jpg">
+            </figure>
+            <div class="destination_description">
+                <ul class="top_box">
+
+                    <li class="destination_name">
+                        <h3>Dublin, Ireland</h3>
+                    </li>
+                    <li class="latandlng"> </li>
+                    <li class="destination_time"> </li>
+                </ul>
+                <ul class="middle_box">
+                    <p> </p>
+                    <li class="destination_weather">
+                        <div class="icon"></div>
+                        <div class="temp"></div>
+                        
+                    </li>
+
+                </ul>
+                <div class="save_button">
+                    <button id ="save" onclick="window.print()"
+                     onmouseover= ' Client.buttonMouseOver()' onmouseout=" Client.buttonMouseOut()">Print</button>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <p>Travel App</p>
+    </footer>
+</body>
+
+
+</html>
